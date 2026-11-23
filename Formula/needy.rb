@@ -11,11 +11,11 @@ class Needy < Formula
   # during validation. Select the archive by CPU here; the macOS requirement
   # rejects Linux installation before it can use this URL.
   if Hardware::CPU.arm?
-    url "https://github.com/needy-dev/needy/releases/download/v0.0.13/needy-aarch64-apple-darwin.tar.gz"
-    sha256 "23910d352ca9bdb2da7bc949e55babe6361fe787a10d74805cc9aa3610a4d8ba"
+    url "https://github.com/needy-dev/needy/releases/download/v0.0.14/needy-aarch64-apple-darwin.tar.gz"
+    sha256 "19f80c098a460ddfd7bd5317067bab1fab16301f03f48faaba5965649de2c221"
   elsif Hardware::CPU.intel?
-    url "https://github.com/needy-dev/needy/releases/download/v0.0.13/needy-x86_64-apple-darwin.tar.gz"
-    sha256 "c00c89fa53f01e58e8aa21ebe0bde78561db763f7f678397109bce7c7882420d"
+    url "https://github.com/needy-dev/needy/releases/download/v0.0.14/needy-x86_64-apple-darwin.tar.gz"
+    sha256 "96ee8c6206feb5a74da7faef44365cbab3f9d9963cdfe48a13b4c04d63c06037"
   end
 
   # NOTICE: Homebrew's cleaner makes every file it does not recognise as an
@@ -48,6 +48,6 @@ class Needy < Formula
   end
 
   test do
-    assert_equal "needy 0.0.13", shell_output("#{bin}/needy --version").strip
+    assert_equal "needy 0.0.14", shell_output("#{bin}/needy --version").strip
   end
 end
